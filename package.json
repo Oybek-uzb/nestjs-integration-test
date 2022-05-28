@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "db:restart": "docker compose down && docker compose up -d && sleep 1",
+    "db:restart": "docker compose down && docker compose up -d",
     "pretest:int": "yarn db:restart",
     "test:int": "jest -i --no-cache --watch --config jest-int.json"
   },
@@ -43,6 +43,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "dotenv-cli": "^5.1.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
